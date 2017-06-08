@@ -6,6 +6,11 @@ This docker image provides a preinstalled [tectonic](https://tectonic-typesettin
 
 ## Usage
 ```bash
-# Note that the :z mount option only is neccessary on selinux plattforms
-docker run -ti --rm --volume ./:/tectonic:z fabianhauser/tectonic YourFile.tex
+docker run -it --rm --volume ${pwd}:/tectonic bemayr/tectonic --help
+docker run -it --rm --volume ${pwd}:/tectonic bemayr/tectonic <filename>.tex
+```
+
+## Development
+```bash
+docker build -t bemayr/tectonic:0.1.5
 ```
